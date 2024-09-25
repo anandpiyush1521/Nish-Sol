@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nish-Sol
+
+Welcome to the **Solana Wallet App**! This is a React-based application designed to interact with the Solana blockchain. It allows users to connect their Solana wallet, view balances, receive airdrops, and disconnect their wallet seamlessly.
+
+![Solana Wallet UI](https://path-to-screenshot-or-gif) <!-- You can replace this with an actual screenshot link -->
+
+## Features
+
+- **Connect Wallet**: Easily connect to any Solana wallet using the `@solana/wallet-adapter-react` and `@solana/wallet-adapter-react-ui`.
+- **View Balance**: Once connected, users can view their wallet's SOL balance in real-time.
+- **Airdrop Request**: Request airdrops directly to the connected wallet, with adjustable SOL amounts.
+- **Auto Balance Refresh**: The wallet balance refreshes every 10 seconds automatically.
+- **Disconnect Wallet**: Securely disconnect your wallet with a simple button press.
+- **Toaster Notifications**: Feedback notifications are displayed for successful and failed actions.
 
 ## Getting Started
 
-First, run the development server:
+Follow the steps below to get the app running on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you have the following installed:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [npm](https://www.npmjs.com/) (v6 or higher)
+- [Solana CLI](https://docs.solana.com/cli/install-solana-cli-tools) (Optional, if you want to interact with Solana via the CLI)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/solana-wallet-app.git
+    cd solana-wallet-app
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Environment Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Make sure you set up your environment correctly before running the app. Create a `.env` file in the root directory and add your configurations:
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```plaintext
+NEXT_PUBLIC_NETWORK_URL=https://api.devnet.solana.com
+NEXT_PUBLIC_COMMITMENT=confirmed
